@@ -16,11 +16,11 @@
 	"blocks": {
 		"purpose": {
 			"title": "Objetivo",
-			"content": "Este experimento pretende generar el mayor número posible de imágenes de la fotosfera solar. Cuanto mejor sean las imágenes, más precisa será la medida diaria de la actividad solar que consigamos"
+			"content": "Este experimento pretende generar el mayor número posible de imágenes de la fotosfera solar. Cuanto mejor sean las imágenes, más precisa será la medida diaria de la actividad solar que consigamos."
 		},
 		"tel_desc": { 
 			"title": "Descripción del telescopio",
-			"content": "El telescopio que estás usando es el TADs, ubicado en el Observatorio del Teide en Tenerife"
+			"content": "El telescopio que estás usando es el TADs, ubicado en el Observatorio del Teide en Tenerife."
 		},
 		"target": { 
 			"title": "Objeto",
