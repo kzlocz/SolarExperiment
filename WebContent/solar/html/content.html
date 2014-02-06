@@ -3,7 +3,7 @@
 		<div align="center">
 			<h5 class="label-info title" style="margin-top: 0px">{{'solar.blocks.purpose.title'|i18n}}</h5>
 		</div>
-		<div class="info-text">{{'solar.blocks.purpose.content'|i18n}}.</div>
+		<div class="info-text">{{'solar.blocks.purpose.content'|i18n}}</div>
 	</div>
 	<div class="span4" style="cursor: default">
 		<div align="center">
@@ -51,7 +51,7 @@
 			<div class="animate-show" ng-class="{'opaque': status.focused==true}"
 				style="position: relative; opacity: 0.7">
 				<div ng-style="status.dome.openStyle"
-					ng-show="status.dome.openEnabled" tooltip-popup-delay="500"
+					ng-show="!status.dome.locked && status.dome.openEnabled" tooltip-popup-delay="500"
 					tooltip="{{'solar.blocks.exterior.open' |i18n}}"
 					tooltip-placement="left"
 					style="position: absolute; width: 35px; left: 57%; top: 123px; cursor: pointer">
@@ -59,7 +59,7 @@
 						ng-click="openDome()">
 				</div>
 				<div ng-style="status.dome.closeStyle"
-					ng-show="status.dome.closeEnabled" tooltip-popup-delay="500"
+					ng-show="!status.dome.locked && status.dome.closeEnabled" tooltip-popup-delay="500"
 					tooltip="{{'solar.blocks.exterior.close' |i18n}}"
 					tooltip-placement="left"
 					style="position: absolute; width: 35px; left: 78.3%; top: 123px; cursor: pointer">

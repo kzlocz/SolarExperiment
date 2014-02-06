@@ -18,7 +18,7 @@ function LoadWeatherContent($gloriaAPI, scope) {
 		return $gloriaAPI.getParameterValue(scope.rid, 'weather',
 				function(data) {
 					scope.wind.value = data.wind.value;
-					scope.wind.high = scope.wind.alarm;
+					scope.wind.high = data.wind.alarm;
 
 					if (scope.wind.high) {
 						scope.wind.style.color = '#FF9900';
@@ -27,7 +27,7 @@ function LoadWeatherContent($gloriaAPI, scope) {
 					}
 
 					scope.rh.value = data.rh.value;
-					scope.rh.high = scope.rh.alarm;
+					scope.rh.high = data.rh.alarm;
 
 					if (scope.rh.high) {
 						scope.rh.style.color = '#FF9900';
