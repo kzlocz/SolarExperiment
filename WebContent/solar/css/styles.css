@@ -51,8 +51,7 @@
 	height: 67px;
 	background-size: 100%;
 	background-position: 0 -10px;
-	background-image:
-		url(http://gloria-project.eu/wp-content/uploads/2013/11/t13-tad_300p.jpg);
+	background-image: url(../img/tads2013s.jpg);
 	filter: grayscale(100%);
 	-webkit-filter: grayscale(100%); /* For Webkit browsers */
 	filter: gray; /* For IE 6 - 9 */

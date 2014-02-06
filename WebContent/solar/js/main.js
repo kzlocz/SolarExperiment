@@ -4,7 +4,6 @@ function pad(n) {
 	return (n < 10) ? ("0" + n) : n;
 }
 
-
 toolbox.lazy.filter('UTCFullFilter', function() {
 	return function(input) {
 		return new Date(input).toUTCString();
@@ -51,12 +50,12 @@ toolbox.lazy.filter('UTCDateFilter', function() {
 	};
 });
 
-function SolarMainCtrl($gloriaAPI, $scope, $timeout,
-		$gloriaLocale, $routeParams) {
+function SolarMainCtrl($gloriaAPI, $scope, $timeout, $gloriaLocale,
+		$routeParams) {
 
 	$scope.mainPath = 'solar';
 	$scope.solarReady = false;
-	
+
 	$gloriaLocale.loadResource($scope.mainPath + '/lang', 'solar', function() {
 		$scope.solarReady = true;
 	});
@@ -78,7 +77,7 @@ function SolarMainCtrl($gloriaAPI, $scope, $timeout,
 	$scope.imageTaken = true;
 	$scope.ccdProblem = false;
 	$scope.weatherAlarm = false;
-	
+
 	$scope.specificHtml = $scope.mainPath + '/html/content.html';
 
 	$scope.onReservation = function() {
@@ -164,6 +163,8 @@ function SolarMainCtrl($gloriaAPI, $scope, $timeout,
 		} else {
 			$scope.wrongReservation = true;
 		}
+	} else if ($routeParams.dev != undefined) {
+		$scope.reservationActive = true;
 	} else {
 		$scope.rid = -1;
 		$scope.preRid = '';
